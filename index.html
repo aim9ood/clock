@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>세련된 현재 날짜와 시간 (AM/PM 포함)</title>
+    <title>투명하고 반응형인 현재 날짜와 시간</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
@@ -14,26 +14,22 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f5f5f5;
+            background-color: #f5f5f5; /* 배경색은 테스트를 위해 유지합니다. 실제 사용시 제거하세요. */
             color: #333;
         }
         #datetime {
             text-align: center;
-            font-size: 24px;
-            background-color: white;
-            padding: 30px 50px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-size: 16px; /* 기본 폰트 크기 */
         }
         #date {
-            font-size: 32px;
+            font-size: 2em; /* 32px 대신 상대적 크기 사용 */
             font-weight: 300;
-            margin-bottom: 5px;
+            margin-bottom: 0.3125em; /* 5px 대신 상대적 크기 사용 */
         }
         #day {
-            font-size: 20px;
+            font-size: 1.25em; /* 20px 대신 상대적 크기 사용 */
             color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 0.9375em; /* 15px 대신 상대적 크기 사용 */
         }
         #time-container {
             display: flex;
@@ -41,13 +37,26 @@
             align-items: baseline;
         }
         #time {
-            font-size: 48px;
+            font-size: 3em; /* 48px 대신 상대적 크기 사용 */
             font-weight: 400;
         }
         #ampm {
-            font-size: 18px;
+            font-size: 1.125em; /* 18px 대신 상대적 크기 사용 */
             color: #666;
-            margin-left: 5px;
+            margin-left: 0.3125em; /* 5px 대신 상대적 크기 사용 */
+        }
+
+        /* 반응형 디자인을 위한 미디어 쿼리 */
+        @media (min-width: 768px) {
+            #datetime {
+                font-size: 20px; /* 더 큰 화면에서는 기본 폰트 크기를 키웁니다 */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #datetime {
+                font-size: 24px; /* 가장 큰 화면에서는 기본 폰트 크기를 더 키웁니다 */
+            }
         }
     </style>
 </head>
